@@ -5,6 +5,8 @@ import 'image_and_icons.dart';
 import 'title_and_price.dart';
 
 class Body extends StatelessWidget {
+  const Body({super.key});
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -12,8 +14,8 @@ class Body extends StatelessWidget {
       child: Column(
         children: <Widget>[
           ImageAndIcons(size: size),
-          TitleAndPrice(title: "Angelica", country: "Russia", price: 440),
-          SizedBox(height: kDefaultPadding),
+          const TitleAndPrice(title: "Angelica", country: "Russia", price: 440),
+          const SizedBox(height: kDefaultPadding),
           Row(
             children: <Widget>[
               SizedBox(
@@ -24,10 +26,9 @@ class Body extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    primary: kPrimaryColor,
                   ),
                   onPressed: () {},
-                  child: Text(
+                  child: const Text(
                     "Buy Now",
                     style: TextStyle(
                       color: Colors.white,
@@ -39,7 +40,7 @@ class Body extends StatelessWidget {
               Expanded(
                 child: ElevatedButton(
                   onPressed: () {},
-                  child: Text("Description"),
+                  child: const Text("Description"),
                 ),
               ),
             ],

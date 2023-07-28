@@ -4,11 +4,13 @@ import 'package:bai2/constants.dart';
 import 'package:bai2/screens/home/components/body.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
-      body: Body(),
+      body: const Body(),
     );
   }
 
@@ -25,7 +27,6 @@ class HomeScreen extends StatelessWidget {
           icon: SvgPicture.asset(
             "assets/icons/search.svg",
             // By default our  icon color is white
-            color: kTextColor,
           ),
           onPressed: () {},
         ),
@@ -33,11 +34,10 @@ class HomeScreen extends StatelessWidget {
           icon: SvgPicture.asset(
             "assets/icons/cart.svg",
             // By default our  icon color is white
-            color: kTextColor,
           ),
           onPressed: () {},
         ),
-        SizedBox(width: kDefaultPaddin / 2)
+        const SizedBox(width: kDefaultPaddin / 2)
       ],
     );
   }

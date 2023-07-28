@@ -19,7 +19,7 @@ class AddToCart extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Container(
-            margin: EdgeInsets.only(right: kDefaultPaddin),
+            margin: const EdgeInsets.only(right: kDefaultPaddin),
             height: 50,
             width: 58,
             decoration: BoxDecoration(
@@ -31,7 +31,6 @@ class AddToCart extends StatelessWidget {
             child: IconButton(
               icon: SvgPicture.asset(
                 "assets/icons/add_to_cart.svg",
-                color: product.color,
               ),
               onPressed: () {},
             ),
@@ -43,13 +42,12 @@ class AddToCart extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18),
-                  ),
-                  primary: product.color,
+                  ), backgroundColor: product.color,
                 ),
                 onPressed: () {},
                 child: Text(
                   "Buy  Now".toUpperCase(),
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,

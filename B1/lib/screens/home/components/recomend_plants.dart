@@ -23,7 +23,7 @@ class RecomendsPlants extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetailsScreen(),
+                  builder: (context) => const DetailsScreen(),
                 ),
               );
             },
@@ -37,7 +37,7 @@ class RecomendsPlants extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetailsScreen(),
+                  builder: (context) => const DetailsScreen(),
                 ),
               );
             },
@@ -73,7 +73,7 @@ class RecomendPlantCard extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         left: kDefaultPadding,
         top: kDefaultPadding / 2,
         bottom: kDefaultPadding * 2.5,
@@ -85,16 +85,16 @@ class RecomendPlantCard extends StatelessWidget {
           GestureDetector(
             onTap: press,
             child: Container(
-              padding: EdgeInsets.all(kDefaultPadding / 2),
+              padding: const EdgeInsets.all(kDefaultPadding / 2),
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(10),
                   bottomRight: Radius.circular(10),
                 ),
                 boxShadow: [
                   BoxShadow(
-                    offset: Offset(0, 10),
+                    offset: const Offset(0, 10),
                     blurRadius: 50,
                     color: kPrimaryColor.withOpacity(0.23),
                   ),
@@ -107,9 +107,9 @@ class RecomendPlantCard extends StatelessWidget {
                       children: [
                         TextSpan(
                             text: "$title\n".toUpperCase(),
-                            style: Theme.of(context).textTheme.button),
+                            style: Theme.of(context).textTheme.labelLarge),
                         TextSpan(
-                          text: "$country".toUpperCase(),
+                          text: country.toUpperCase(),
                           style: TextStyle(
                             color: kPrimaryColor.withOpacity(0.5),
                           ),
@@ -117,12 +117,12 @@ class RecomendPlantCard extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Text(
                     '\$$price',
-                    style: Theme.of(context).textTheme.button?.copyWith(
+                    style: Theme.of(context).textTheme.labelLarge?.copyWith(
                       color: kPrimaryColor,
-                    ) ?? TextStyle(),
+                    ) ?? const TextStyle(),
                   )
                 ],
               ),

@@ -25,7 +25,6 @@ class DetailsScreen extends StatelessWidget {
       leading: IconButton(
         icon: SvgPicture.asset(
           'assets/icons/back.svg',
-          color: Colors.white,
         ),
         onPressed: () => Navigator.pop(context),
       ),
@@ -38,7 +37,7 @@ class DetailsScreen extends StatelessWidget {
           icon: SvgPicture.asset("assets/icons/cart.svg"),
           onPressed: () {},
         ),
-        SizedBox(width: kDefaultPaddin / 2)
+        const SizedBox(width: kDefaultPaddin / 2)
       ],
     );
   }

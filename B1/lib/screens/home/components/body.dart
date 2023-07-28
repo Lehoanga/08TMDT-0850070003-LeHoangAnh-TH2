@@ -7,9 +7,11 @@ import 'recomend_plants.dart';
 import 'title_with_more_bbtn.dart';
 
 class Body extends StatelessWidget {
+  const Body({super.key});
+
   @override
   Widget build(BuildContext context) {
-    // It will provie us total height  and width of our screen
+    // It will provide us total height  and width of our screen
     Size size = MediaQuery.of(context).size;
     // it enable scrolling on small device
     return SingleChildScrollView(
@@ -17,11 +19,11 @@ class Body extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           HeaderWithSearchBox(size: size),
-          TitleWithMoreBtn(title: "Recomended", press: () {}),
-          RecomendsPlants(),
+          TitleWithMoreBtn(title: "Recommended", press: () {}),
+          const RecomendsPlants(),
           TitleWithMoreBtn(title: "Featured Plants", press: () {}),
-          FeaturedPlants(),
-          SizedBox(height: kDefaultPadding),
+          const FeaturedPlants(),
+          const SizedBox(height: kDefaultPadding),
         ],
       ),
     );
